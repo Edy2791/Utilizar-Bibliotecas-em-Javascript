@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animação com jQuery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="jquery-3.7.1_071047.js" type="text/javascript"></script>
+    <title>Animação com jQuery</title>
+    <style>
+        #display {
+            width: 780px;
+            height: 500px;
+            background-color: AliceBlue;
+            border: thin solid Black;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $("#btnHideShow").click(function() {
+                $("#display").toggle();
+            });
+        });
+    </script>
+    <div id="display">
+        <!-- Conteúdo aqui -->
+    </div>
+    <input type="button" name="btnHideShow" id="btnHideShow" value="Hide/Show" style="width:100px; height:30px;" />
+</body>
+</html>

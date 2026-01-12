@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pauta de Notas</title>
+    <script src="jquery-3.7.1_071047.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnCalcular").click(function() {
+                var cod = $("#cod").val();
+                var nome = $("#nome").val();
+                var sexo = $("#sexo").val();
+                var disciplina = $("#disciplina").val();
+                var acs1 = parseFloat($("#acs1").val());
+                var acs2 = parseFloat($("#acs2").val());
+                var acp1 = parseFloat($("#acp1").val());
+                var acp2 = parseFloat($("#acp2").val());
+                var tp = parseFloat($("#tp").val());
+
+                var medACS = (acs1 + acs2) / 2;
+                var medACP = (acp1 + acp2) / 2;
+                var medAnual = (medACS * 0.3) + (medACP * 0.5) + (tp * 0.2);
+
+                $("#tabelaPauta tbody").append(
+                    "<tr><td>" + cod + "</td><td>" + nome + "</td><td>" + sexo + "</td><td>" + disciplina + "</td><td>" + medACS.toFixed(2) + "</td><td>" + medACP.toFixed(2) + "</td><td>" + tp + "</td><td>" + medAnual.toFixed(2) + "</td></tr>"
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        Código: <input id="cod" type="text"><br>
+        Nome: <input id="nome" type="text"><br>
+        Sexo: <select id="sexo"><option>M</option><option>F</option></select><br>
+        Disciplina: <input id="disciplina" type="text"><br>
+        ACS1: <input id="acs1" type="text"><br>
+        ACS2: <input id="acs2" type="text"><br>
+        ACP1: <input id="acp1" type="text"><br>
+        ACP2: <input id="acp2" type="text"><br>
+        TP: <input id="tp" type="text"><br>
+        <button id="btnCalcular" type="button">Calcular</button>
+    </form>
+    <table id="tabelaPauta" border="1">
+        <thead><tr><th>Cod</th><th>Nome</th><th>Sexo</th><th>Disciplina</th><th>Med ACS</th><th>Med ACP</th><th>TP</th><th>Med Anual</th></tr></thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício jQuery</title>
+    <script src="jquery-3.7.1_071047.js"></script>
+    <style>
+        .titulo1 { color: blue; font-size: 44px; }
+        .titulo2 { color: red; font-size: 30px; }
+        .paragrafo { color: green; font-size: 22px; text-align: justify; }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("h1").click(function() {
+                $(this).addClass("titulo1");
+            });
+            $("h2").click(function() {
+                $(this).addClass("titulo2");
+            });
+            $("p").click(function() {
+                $(this).addClass("paragrafo");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Clique aqui para mudar para azul</h1>
+    <h2>Clique aqui para mudar para vermelho</h2>
+    <p>Clique aqui para mudar para verde e justificar.</p>
+</body>
+</html>

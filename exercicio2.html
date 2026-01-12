@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Venda de Produtos</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="venda.js"></script>
+</head>
+<body>
+
+
+<form id="formVenda">
+Produto:
+<select id="produto">
+<option value="Arroz">Arroz</option>
+<option value="Feijão">Feijão</option>
+<option value="Açúcar">Açúcar</option>
+</select><br><br>
+
+
+Preço Unitário:
+<input type="text" id="preco"><br><br>
+
+
+Quantidade:
+<input type="text" id="quantidade"><br><br>
+
+
+<button type="button" id="processar">PROCESSAR VENDA</button>
+</form>
+
+
+<br>
+
+
+<table border="1">
+<thead>
+<tr>
+<th>Produto</th>
+<th>Preço Unit</th>
+<th>Quantidade</th>
+<th>Custo Real</th>
+<th>IVA (16%)</th>
+<th>Custo de Venda</th>
+</tr>
+</thead>
+<tbody id="tabela"></tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculo de Media</title>
+    <script src="jquery-3.7.1_071047.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnCalcular").click(function() {
+                var codEst = $("#codEst").val();
+                var disciplina = $("#disciplina").val();
+                var med1 = parseFloat($("#med1").val());
+                var med2 = parseFloat($("#med2").val());
+                var med3 = parseFloat($("#med3").val());
+                var mediaAnual = (med1 + med2 + med3) / 3;
+                var resultado = (mediaAnual < 10) ? "Excluido" : (mediaAnual >= 14) ? "Dispensado" : "Admitido";
+
+                $("#tabelaResultado tbody").append(
+                    "<tr><td>" + codEst + "</td><td>" + disciplina + "</td><td>" + med1 + "</td><td>" + med2 + "</td><td>" + med3 + "</td><td>" + mediaAnual.toFixed(2) + "</td><td>" + resultado + "</td></tr>"
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        Código: <input id="codEst" type="text"><br>
+        Disciplina: <select id="disciplina">
+            <option>Matematica</option>
+            <option>Portugues</option>
+        </select><br>
+        Med Trim1: <input id="med1" type="text"><br>
+        Med Trim2: <input id="med2" type="text"><br>
+        Med Trim3: <input id="med3" type="text"><br>
+        <button id="btnCalcular" type="button">Calcular</button>
+    </form>
+    <table id="tabelaResultado" border="1">
+        <thead><tr><th>CODEST</th><th>DISCIPLINA</th><th>MED TRIM1</th><th>MED TRIM2</th><th>MED TRIM3</th><th>MED ANUAL</th><th>RESULTADO</th></tr></thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
