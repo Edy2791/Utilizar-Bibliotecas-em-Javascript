@@ -1,2 +1,9 @@
 //Sintaxe basica
 $("seletor").acao();
+
+//Exemplos basicos
+$("p").hide();        // esconde todos os parágrafos
+$("#titulo").show(); // mostra elemento com id="titulo"
+$(".caixa").hide();  // esconde elementos com class="caixa"
+
+

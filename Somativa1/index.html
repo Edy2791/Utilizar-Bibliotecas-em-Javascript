@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somativa 1 - Folha Salarial - Edmundo Joao Fernando Come</title>
+    
+    
+    <link rel="stylesheet" href="estilos.css">
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="cadastros">
+        <h1>Somativa1 - Edmundo Joao Fernando Come - 22550 - TPW4</h1>
+        <h2>RDA1. Percorrer e manipular conteúdo de páginas web com jQuery</h2>
+        <h2>RDA2. Efeitos em páginas web com jQuery</h2>
+        <h2>RDA3. Tratar eventos em páginas web com jQuery</h2>
+        
+        <h3>LANCAMENTO SALARIAL DO TRABALHADOR</h3>
+        
+        <form id="formSalario">
+            NR INSS: <input type="text" id="inss"><br><br>
+            Nome: <input type="text" id="nome"><br><br>
+            Sexo: 
+                <input type="radio" name="sexo" value="Masculino"> Masculino 
+                <input type="radio" name="sexo" value="Feminino"> Feminino<br><br>
+            Profissão: 
+                <select id="profissao">
+                    <option value="Programador">Programador</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Engenheiro">Engenheiro</option>
+                    <option value="Contabilista">Contabilista</option>
+                    
+                </select><br><br>
+            Salário Base: <input type="number" id="salbase" step="0.01" min="0"><br><br>
+            Subsídio Técnico: <input type="number" id="subtec" step="0.01" min="0"><br><br>
+            Horas Extras: <input type="number" id="horas" step="0.01" min="0"><br><br>
+            Bónus: <input type="number" id="bonus" step="0.01" min="0"><br><br>
+            
+            <button type="button" id="btnRegistrar">Registrar / Adicionar</button>
+        </form>
+    </div>
+
+    <div id="folhasalarial" style="display: none;">
+        <h3>EMISSÃO DA FOLHA SALARIAL DE DEZEMBRO DE 2025</h3>
+        <table border="1" id="tabelaFolha">
+            <thead>
+                <tr>
+                    <th>NRINSS</th>
+                    <th>NOME</th>
+                    <th>SEXO</th>
+                    <th>PROFISSÃO</th>
+                    <th>SAL.BASE</th>
+                    <th>SUB.TEC</th>
+                    <th>HORAS</th>
+                    <th>BONUS</th>
+                    <th>TOTALSAL</th>
+                    <th>DESC.INSS</th>
+                    <th>SAL.LIQ</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    
+    <button id="btnMostrarCadastros" style="margin-left: 250px; width: 300px; height: 30px;">Mostrar / Ocultar Cadastros</button>
+    <button id="btnMostrarFolha" style="margin-left: 650px; width: 300px; height: 30px;">Mostrar / Ocultar Folha Salarial</button>
+
+</body>
+</html>

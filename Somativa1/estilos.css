@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+#cadastros {
+    padding: 25px;
+    background-color: #f0f8ff;
+    border: 1px solid #4682b4;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#folhasalarial {
+    padding: 25px;
+    background-color: #fffacd;
+    border: 1px solid #daa520;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+input, select {
+    padding: 6px;
+    margin: 4px 0;
+    width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+}
